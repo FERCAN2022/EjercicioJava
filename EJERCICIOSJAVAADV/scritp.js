@@ -183,5 +183,14 @@ function renderBody(){
 }
  
 //12. Corrige la function sortPokemons para que acepte ordenarlos segun id y name.
+
+function sortpokemons(argument){
+    let validInput = ["id","name","type" , "base_damage","base_hp","speed"]
+    if(validInput.includes(argument)){
+            pokemons.sort((a,b) => a[argument]- b[argument] )
+    } else{
+        console.log("Ingresar un valor valido")
+    }
+ }
  
 
